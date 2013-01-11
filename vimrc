@@ -31,6 +31,7 @@ if !filereadable(expand("$VIMRUNTIME/doc/help.txt"))
 endif
 
 " Settings {{{
+
 " Basic settings {{{
 " To be secure & Vi nocompatible
 :set secure nocompatible
@@ -1110,4 +1111,6 @@ autocmd BufNewFile,Bufread *.ros,*.inc,*.php set keywordprg="help"
  """ Ctrl+W 执行 ：w 操作，保存当前文件
  nmap <F4> :w<cr>
  "" here is not comtiable
- ""nmap <C-Q> :wq<cr>
+ ""nmap <C-Q> :wq<cr>cWU
+ map <C-c> :s/^/\/\//<Enter>:noh<Enter>                                                                                                        
+ map <C-u> :s/^\/\///<Enter>:noh<Enter>
